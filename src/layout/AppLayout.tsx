@@ -6,7 +6,9 @@ const AppLayout = () => {
       <header className="w-full flex items-center flex-col bg-black">
         <div className="w-[80%] flex">
           <div className="w-[55%] flex justify-end py-5">
-            <img className="w-[20%]" src="/img/logo-negro-en-papel.jpeg" alt="" />
+            <Link className="w-full flex justify-end" to="/">
+              <img className="w-[20%]" src="/img/logo-negro-en-papel.jpeg" alt="" />
+            </Link>
           </div>
           <div className="w-[45%] flex justify-end items-center">
             <Link to="">
@@ -21,10 +23,18 @@ const AppLayout = () => {
         <div className="w-full flex justify-center bg-[#1E1E1E]">
           <nav className="w-full md:w-[40%]">
             <ul className="flex justify-around text-white py-3">
-              <li className="font-light">Trabajos</li>
-              <li className="font-light">Información</li>
-              <li className="font-light">Contacto</li>
-              <li className="font-light">Galeria</li>
+              <li className="font-light">
+                <Link to="/trabajos">Trabajos</Link>
+              </li>
+              <li className="font-light">
+                <Link to="/informacion">Información</Link>
+              </li>
+              <li className="font-light">
+                <a href="#contactoId">Contacto</a>
+              </li>
+              <li className="font-light">
+                <Link to="/galeria">Galeria</Link>
+              </li>
             </ul>
           </nav>
         </div>

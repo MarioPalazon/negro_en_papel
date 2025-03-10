@@ -95,7 +95,7 @@ const IndexPageView = () => {
       </section>
 
       <section className="w-full flex justify-center">
-    <article className="w-[90%] md:w-[80%] flex flex-col justify-center items-center my-14 border-t border-black">
+    <article id="contactoId" className="w-[90%] md:w-[80%] flex flex-col justify-center items-center my-14 border-t border-black">
       <h2 className="my-10 text-2xl md:text-3xl font-light">Contacto</h2>
       <div className="w-[90%] md:w-[40%] bg-[#1E1E1E] flex flex-col items-center py-6 rounded-2xl">
         <h3 className="text-white font-light mb-4">Camila Ortiz Borquez</h3>
