@@ -7,16 +7,16 @@ const IndexPageView = () => {
         <article className="w-[90%] md:w-[80%] flex flex-col md:flex-row my-14">
           {/* Texto */}
           <div className="w-full md:w-1/2 flex justify-center">
-            <div className="w-[90%] md:w-[70%] flex flex-col items-start justify-center">
+            <div className="w-[80%] md:w-[70%] flex flex-col items-start justify-center">
               <h1 className="text-2xl md:text-3xl mb-4 font-light">Negro en Papel</h1>
-              <p className="font-light text-sm md:text-base">
+              <p className="font-light md:text-base">
               Lorem ipsum dolor sit amet consectetur adipiscing elit sociis, suscipit ac curabitur condimentum luctus gravida himenaeos, proin purus turpis quis dui scelerisque urna. Iaculis primis sed magna mauris torquent dictumst metus tellus curae
               </p>
             </div>
           </div>
           {/* Imágenes */}
           <div className="w-full md:w-1/2 flex justify-center mt-6 md:mt-0">
-            <div className="w-[90%] md:w-[80%]">
+            <div className="w-[80%]">
               <div className="flex items-center justify-start gap-3">
                 <img className="w-[60%] h-auto" src="/img/intro-1top.jpeg" alt="" />
                 <img className="w-[40%] h-auto" src="/img/intro-2top.jpeg" alt="" />
@@ -30,7 +30,7 @@ const IndexPageView = () => {
         </article>
       </section>
 
-      <section className="w-full flex flex-col items-center justify-center bg-[#1E1E1E]">
+      <section id="trabajosId" className="w-full flex flex-col items-center justify-center bg-[#1E1E1E]">
         <h2 className="text-white my-5 text-3xl font-light">Mis Trabajos</h2>
         <article className="w-full md:w-[80%] flex justify-center py-14">
 
@@ -67,11 +67,11 @@ const IndexPageView = () => {
 
     
 
-      <section className="w-full flex justify-center py-6">
-        <article className="w-[90%] md:w-[80%] flex flex-col md:flex-row my-7">
+      <section id="informacionId" className="w-full flex justify-center py-6">
+        <article className="w-[80%] flex flex-col md:flex-row my-7">
           <div className="w-full md:w-1/2 flex flex-col md:flex-row justify-between items-center">
             <h2 className="w-full md:w-[20%] my-5 text-2xl md:text-3xl font-light">Información</h2>
-            <div className="w-full md:w-[60%] text-sm md:text-base">
+            <div className="w-full md:w-[60%] md:text-base">
               <p className="mb-6 font-light">
               Lorem ipsum dolor sit amet consectetur adipiscing elit sociis, suscipit ac curabitur condimentum luctus gravida himenaeos, proin purus turpis quis dui scelerisque urna. Iaculis primis sed magna mauris torquent dictumst metus tellus curae.
               </p>
