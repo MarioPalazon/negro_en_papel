@@ -4,17 +4,30 @@ const AppLayout = () => {
   return (
     <div>
       <header className="w-full flex items-center flex-col bg-black">
-        <div className="w-[80%] flex">
-          <div className="w-[55%] flex justify-end py-5">
-            <Link className="w-full flex sm:justify-start md:justify-end" to="/">
-              <img className="w-[60%] md:w-[20%]" src="/img/logo-negro-en-papel.jpeg" alt="" />
+        <div className="w-[80%] flex flex-col md:flex-row md:justify-between lg:w-[70%]">
+
+          <div className=" w-full md:w-[30%] flex flex-col md:justify-center mt-3 lg:flex">
+            <h4 className="text-white text-[15px] font-light flex justify-center items-center md:justify-start md:mb-3">
+              <img className="w-[7%] me-2" src="/img/icon-ubicacion.png" alt="" />
+              Santiago, Chile
+              </h4>
+            <p className="text-white text-[15px] font-light flex justify-center items-center md:justify-start">
+              <img className="w-[7%] me-2" src="/img/icon-box.png" alt="" />
+              Envio a Regiones
+            </p>
+          </div>
+
+          <div className="w-full md:w-[30%] py-5">
+            <Link className="w-full flex justify-center md:justify-center" to="/">
+              <img className="w-[50%] md:w-[80%] lg:w-[50%]" src="/img/logo-negro-en-papel.jpeg" alt="" />
             </Link>
           </div>
-          <div className="w-[45%] flex justify-end items-center">
-            <Link to="">
+
+          <div className="w-full mb-4 flex justify-center md:w-[30%] md:justify-end md:items-center">
+            <Link className="flex justify-center" to="https://www.instagram.com/negro_enpapel/">
               <img className="w-[50%]" src="/img/icon-instagram.png" alt="" />
             </Link>
-            <Link to="">
+            <Link className="flex justify-center" to="">
               <img className="w-[50%]" src="/img/icon-whatsapp.png" alt="" />
             </Link>
           </div>
@@ -24,13 +37,13 @@ const AppLayout = () => {
           <nav className="w-full md:w-[40%]">
             <ul className="flex justify-around text-white py-3">
               <li className="font-light">
-                <a href="#trabajosId">Trabajos</a>
+                <a href="/#trabajosId">Trabajos</a>
               </li>
               <li className="font-light">
-                <a href="#informacionId">Información</a>
+                <a href="/#informacionId">Información</a>
               </li>
               <li className="font-light">
-                <a href="#contactoId">Contacto</a>
+                <a href="/#contactoId">Contacto</a>
               </li>
               <li className="font-light">
                 <Link to="/galeria">Galeria</Link>
