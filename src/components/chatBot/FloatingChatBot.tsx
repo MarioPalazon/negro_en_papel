@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState, useRef, useEffect } from "react"
-import { MessageCircle, X, Send, ChevronDown, Info, Phone, Clock, Home } from "lucide-react"
+import { MessageCircle, X, ChevronDown, Info, Phone, Home } from "lucide-react"
 
 // Definir tipos para los mensajes
 type MessageType = {
@@ -29,25 +29,21 @@ type PredefinedQuestion = {
 
 // Definir preguntas y respuestas predefinidas
 const predefinedQA: Record<string, string> = {
-  hola: "¡Hola! ¿En qué puedo ayudarte hoy?",
-  "quien eres": "Soy un chatbot simple creado para responder preguntas predefinidas.",
-  "como estas": "Estoy bien, gracias por preguntar. ¿Y tú?",
-  "que puedes hacer":
-    "Puedo responder preguntas predefinidas. Puedes seleccionar una de las opciones disponibles o escribir tu pregunta.",
-  servicios: "Ofrecemos servicios de desarrollo web, diseño UI/UX y consultoría tecnológica.",
-  "servicios web":
-    "Nuestros servicios web incluyen desarrollo de sitios web, aplicaciones web, e-commerce y sistemas de gestión de contenido.",
-  "servicios diseño":
-    "Nuestros servicios de diseño incluyen diseño de interfaces, experiencia de usuario, identidad visual y prototipos interactivos.",
-  "servicios consultoría":
-    "Ofrecemos consultoría en transformación digital, optimización de procesos y estrategias tecnológicas para empresas.",
-  horarios: "Nuestro horario de atención es de lunes a viernes de 9:00 a 18:00.",
-  "horario oficina": "Nuestra oficina está abierta de lunes a viernes de 9:00 a 18:00.",
-  "horario soporte": "El soporte técnico está disponible 24/7 para clientes con contrato de mantenimiento.",
-  contacto: "Puedes contactarnos en info@ejemplo.com o llamar al +123456789.",
-  "contacto email": "Nuestro email de contacto es info@ejemplo.com",
-  "contacto teléfono": "Puedes llamarnos al +123456789",
-  "contacto dirección": "Estamos ubicados en Calle Ejemplo 123, Ciudad Ejemplo",
+    hola: "",
+        "¿en que consiste?":
+            "Hacemos un hermoso retrato a grafito de tu mascota, cualquier duda presiona las otras opciones.",
+    servicios: "",
+        "retrato a grafito":
+            "Nuestro servicio consiste en retratos en grafito hecho a mano de tu mascotita.",
+        "valores y dimensiones":
+            "Los precios y tamaños son: Tamaño A3: $12.000 Tamaño A4: $17.000",
+        "¿que incluye?":
+            "El retrato incluye un marco de madera y vidrio.",
+        "¿como solicitar un retrato?":
+            "Envía la fotografía de tu mascotita que deseas retratar por email o instagram.",
+    contacto: "",
+        "email de contacto": "Nuestro email de contacto es negro.enpapel@gmail.com",
+        "red social de contacto": "https://www.instagram.com/negro_enpapel",
   gracias: "¡De nada! Estoy aquí para ayudarte.",
   adios: "¡Hasta luego! Que tengas un buen día.",
 }
@@ -56,40 +52,28 @@ const predefinedQA: Record<string, string> = {
 const categories: Category[] = [
   { id: "general", name: "General", icon: <Home size={16} /> },
   { id: "servicios", name: "Servicios", icon: <Info size={16} /> },
-  { id: "horarios", name: "Horarios", icon: <Clock size={16} /> },
+  //{ id: "horarios", name: "Horarios", icon: <Clock size={16} /> },
   { id: "contacto", name: "Contacto", icon: <Phone size={16} /> },
 ]
 
 // Lista de preguntas predefinidas para mostrar como botones, organizadas por categoría
 const predefinedQuestions: PredefinedQuestion[] = [
   // General
-  { id: "q1", text: "¿Quién eres?", category: "general" },
-  { id: "q2", text: "¿Qué puedes hacer?", category: "general" },
-  { id: "q3", text: "Hola", category: "general" },
-  { id: "q4", text: "¿Cómo estás?", category: "general" },
-
+  { id: "q1", text: "¿En que consiste?", category: "general" },
   // Servicios
-  { id: "s1", text: "¿Qué servicios ofrecen?", category: "servicios" },
-  { id: "s2", text: "Servicios de desarrollo web", category: "servicios" },
-  { id: "s3", text: "Servicios de diseño", category: "servicios" },
-  { id: "s4", text: "Servicios de consultoría", category: "servicios" },
-
-  // Horarios
-  { id: "h1", text: "¿Cuáles son los horarios?", category: "horarios" },
-  { id: "h2", text: "Horario de oficina", category: "horarios" },
-  { id: "h3", text: "Horario de soporte", category: "horarios" },
+  { id: "s1", text: "Retrato a grafito", category: "servicios" },
+  { id: "s2", text: "Valores y dimensiones", category: "servicios" },
+  { id: "s3", text: "¿Que incluye?", category:"servicios"},
+  { id: "s4", text: "¿Como solicitar un retrato?", category:"servicios"},
 
   // Contacto
-  { id: "c1", text: "¿Cómo puedo contactarlos?", category: "contacto" },
-  { id: "c2", text: "Email de contacto", category: "contacto" },
-  { id: "c3", text: "Teléfono de contacto", category: "contacto" },
-  { id: "c4", text: "Dirección de la oficina", category: "contacto" },
+  { id: "c1", text: "Email de contacto", category: "contacto" },
+  { id: "c2", text: "Red Social de contacto", category: "contacto" },
 ]
 
 // Función para encontrar la mejor coincidencia
 const findBestMatch = (input: string): string => {
   input = input.toLowerCase().trim()
-
   // Verificar coincidencia exacta
   if (predefinedQA[input]) {
     return predefinedQA[input]
@@ -116,7 +100,7 @@ export default function Chatbot() {
       timestamp: new Date(),
     },
   ])
-  const [inputValue, setInputValue] = useState("")
+
   const [activeCategory, setActiveCategory] = useState("general")
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
@@ -129,40 +113,6 @@ export default function Chatbot() {
 
   const toggleChat = () => {
     setIsOpen(!isOpen)
-  }
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.target.value)
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-
-    if (!inputValue.trim()) return
-
-    // Agregar mensaje del usuario
-    const userMessage: MessageType = {
-      id: messages.length + 1,
-      text: inputValue,
-      sender: "user",
-      timestamp: new Date(),
-    }
-
-    setMessages((prev) => [...prev, userMessage])
-
-    // Simular respuesta del bot con un pequeño retraso
-    setTimeout(() => {
-      const botResponse: MessageType = {
-        id: messages.length + 2,
-        text: findBestMatch(inputValue),
-        sender: "bot",
-        timestamp: new Date(),
-      }
-
-      setMessages((prev) => [...prev, botResponse])
-    }, 500)
-
-    setInputValue("")
   }
 
   const handleQuestionClick = (questionText: string) => {
@@ -227,11 +177,15 @@ export default function Chatbot() {
                 className={`mb-3 flex ${message.sender === "user" ? "justify-end" : "justify-start"}`}
               >
                 <div
-                  className={`max-w-[80%] rounded-lg p-3 ${
+                  className={`max-w-[95%] rounded-lg p-3 ${
                     message.sender === "user" ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-800"
                   }`}
                 >
-                  <p>{message.text}</p>
+                  {message.text==="https://www.instagram.com/negro_enpapel" ? (
+                    <a className="text-blue-800 hover:underline" target="_blank" href="https://www.instagram.com/negro_enpapel">{message.text}</a>
+                  ):
+                    (<p>{message.text}</p>)
+                  }                  
                   <span
                     className={`text-xs block mt-1 ${message.sender === "user" ? "text-blue-100" : "text-gray-500"}`}
                   >
@@ -278,24 +232,6 @@ export default function Chatbot() {
             </div>
           </div>
 
-          {/* Formulario de entrada */}
-          <form onSubmit={handleSubmit} className="p-3 border-t border-gray-200 bg-white">
-            <div className="flex items-center">
-              <input
-                type="text"
-                value={inputValue}
-                onChange={handleInputChange}
-                placeholder="Escribe tu mensaje..."
-                className="flex-1 border border-gray-300 rounded-l-lg py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-              <button
-                type="submit"
-                className="bg-blue-500 text-white p-2 rounded-r-lg hover:bg-blue-600 focus:outline-none"
-              >
-                <Send size={20} />
-              </button>
-            </div>
-          </form>
         </div>
       )}
     </div>

@@ -1,6 +1,10 @@
 import { Link, Outlet } from "react-router-dom"
+import WhatsAppIcon from "../components/Whatsapp/WhatsAppIcon"
 
 const AppLayout = () => {
+
+
+
   return (
     <div>
       <header className="w-full flex items-center flex-col bg-black">
@@ -24,12 +28,13 @@ const AppLayout = () => {
           </div>
 
           <div className="w-full mb-4 flex justify-center md:w-[30%] md:justify-end md:items-center">
-            <Link className="flex justify-center" to="https://www.instagram.com/negro_enpapel/">
-              <img className="w-[50%]" src="/img/icon-instagram.png" alt="" />
+            
+            <Link className="flex justify-center" to="https://www.instagram.com/negro_enpapel/" target="_blank" rel="noopener noreferrer">
+              <img className="w-[70%]" src="/img/icon-instagram-color.png" alt="Instagram" />              
             </Link>
-            <Link className="flex justify-center" to="">
-              <img className="w-[50%]" src="/img/icon-whatsapp.png" alt="" />
-            </Link>
+
+            <WhatsAppIcon />
+
           </div>
         </div>
         
@@ -37,13 +42,13 @@ const AppLayout = () => {
           <nav className="w-full md:w-[40%]">
             <ul className="flex justify-around text-white py-3">
               <li className="font-light">
-                <a href="/#trabajosId">Trabajos</a>
+                <Link to="/#trabajosId">Trabajos</Link>
               </li>
               <li className="font-light">
-                <a href="/#informacionId">Información</a>
+                <Link to="/#informacionId">Información</Link>
               </li>
               <li className="font-light">
-                <a href="/#contactoId">Contacto</a>
+                <Link to="/#contactoId">Contacto</Link>
               </li>
               <li className="font-light">
                 <Link to="/galeria">Galeria</Link>

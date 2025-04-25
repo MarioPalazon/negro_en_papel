@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom"
+import WhatsAppIcon from "../components/Whatsapp/WhatsAppIcon"
+import WhatsAppButton from "../components/Whatsapp/WhatsAppButton"
 
 const IndexPageView = () => {
+
   return (
     <div>
       <section className="w-full flex justify-center">
@@ -104,9 +107,7 @@ const IndexPageView = () => {
                 <li>Incluye marco de madera y vidrio.</li>
               </ul>
               <div className="w-full flex justify-center mt-10">
-                <button className="w-[60%] md:w-[60%] bg-[#1E1E1E] text-white rounded-2xl py-2">
-                  Cotizar
-                </button>
+                <WhatsAppButton />
               </div>
             </div>
           </div>
@@ -121,15 +122,15 @@ const IndexPageView = () => {
       <h2 className="my-10 text-2xl md:text-3xl font-light">Contacto</h2>
       <div className="w-[90%] md:w-[80%] bg-[#1E1E1E] flex flex-col items-center py-6 rounded-2xl">
         <h3 className="text-white font-light mb-4">Camila Ortiz Borquez</h3>
-        <p className="text-white font-light">+56 9 440 42 334</p>
-        <p className="text-white font-light">micorreo@gmail.com</p>
+        <p className="text-white font-light">negro.enpapel@gmail.com</p>
         <div className="w-[60%] md:w-[30%] flex justify-around items-center my-6">
-          <Link to="https://www.instagram.com/negro_enpapel/">
-            <img className="w-10 md:w-8" src="/img/icon-instagram.png" alt="" />
+          
+          <Link to="https://www.instagram.com/negro_enpapel/" target="_blank" rel="noopener noreferrer">
+            <img className="w-[70%]" src="/img/icon-instagram-color.png" alt="Instagram" />
           </Link>
-          <Link to="">
-            <img className="w-10 md:w-8" src="/img/icon-whatsapp.png" alt="" />
-          </Link>
+
+          <WhatsAppIcon />
+
         </div>
       </div>
     </article>
