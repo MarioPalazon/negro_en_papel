@@ -60,8 +60,8 @@ const AppLayout = () => {
 
         <Outlet />
 
-      <footer className="w-full bg-[#1E1E1E] py-6">
-          <p className="text-white text-center">Este es el footer</p>
+      <footer className="w-full bg-[#1E1E1E] py-3">
+          <p className="text-white text-center">©2025 negro_enpapel</p>
       </footer>
       
     </div>

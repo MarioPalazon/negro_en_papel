@@ -34,13 +34,13 @@ const predefinedQA: Record<string, string> = {
             "Hacemos un hermoso retrato a grafito de tu mascota, cualquier duda presiona las otras opciones.",
     servicios: "",
         "retrato a grafito":
-            "Nuestro servicio consiste en retratos en grafito hecho a mano de tu mascotita.",
+            "Nuestro servicio consiste en retratos en grafito hecho a mano de tu mascota.",
         "valores y dimensiones":
             "Los precios y tamaños son: Tamaño A3: $12.000 Tamaño A4: $17.000",
         "¿que incluye?":
             "El retrato incluye un marco de madera y vidrio.",
         "¿como solicitar un retrato?":
-            "Envía la fotografía de tu mascotita que deseas retratar por email o instagram.",
+            "Envía la fotografía de la mascota que deseas retratar por email o instagram.",
     contacto: "",
         "email de contacto": "Nuestro email de contacto es negro.enpapel@gmail.com",
         "red social de contacto": "https://www.instagram.com/negro_enpapel",

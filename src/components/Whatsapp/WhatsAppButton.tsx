@@ -4,7 +4,7 @@ export default function WhatsAppButton() {
 
     const handleCotizar=()=>{
 
-        const phoneNumber = '569944042334';
+        const phoneNumber = '+56944042334';
         const message = 'Hola, me gustaría comunicarme contigo.';
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
