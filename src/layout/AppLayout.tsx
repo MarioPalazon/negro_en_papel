@@ -1,10 +1,29 @@
-import { Link, Outlet } from "react-router-dom"
+import { Link, Outlet, useLocation, useNavigate } from "react-router-dom"
 import WhatsAppIcon from "../components/Whatsapp/WhatsAppIcon"
 
 const AppLayout = () => {
 
+  const navigate = useNavigate();
+  const location = useLocation();
 
-
+  const handleClick = (ruta: string, idScroll: string) => {
+    if (ruta === "galeria") {
+      navigate("/galeria");
+    } else {
+      if (location.pathname !== "/") {
+        // Si estamos en otra ruta, navegamos al home y guardamos a qué sección ir
+        sessionStorage.setItem("scrollTo", idScroll);
+        navigate("/");
+      } else {
+        // Ya estamos en home: hacer scroll inmediato
+        const section = document.getElementById(idScroll);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    }
+  };
+  
   return (
     <div>
       <header className="w-full flex items-center flex-col bg-black">
@@ -42,16 +61,21 @@ const AppLayout = () => {
           <nav className="w-full md:w-[40%]">
             <ul className="flex justify-around text-white py-3">
               <li className="font-light">
-                <Link to="/#trabajosId">Trabajos</Link>
+                <button className="cursor-pointer hover:text-cyan-50" onClick={() =>handleClick("","trabajosId")}>
+                    Trabajos
+                </button>
               </li>
               <li className="font-light">
-                <Link to="/#informacionId">Información</Link>
+                <button className="cursor-pointer hover:text-cyan-50" onClick={() =>handleClick("","informacionId")}>
+                    Información
+                </button>
               </li>
               <li className="font-light">
-                <Link to="/#contactoId">Contacto</Link>
+                <button className="cursor-pointer hover:text-cyan-50" onClick={() =>handleClick("","contactoId")}>Contacto
+                </button>
               </li>
               <li className="font-light">
-                <Link to="/galeria">Galeria</Link>
+                <button onClick={()=>handleClick("galeria","")}>Galeria</button>
               </li>
             </ul>
           </nav>

@@ -1,8 +1,24 @@
 import { Link } from "react-router-dom"
 import WhatsAppIcon from "../components/Whatsapp/WhatsAppIcon"
 import WhatsAppButton from "../components/Whatsapp/WhatsAppButton"
+import { useEffect } from "react";
 
 const IndexPageView = () => {
+
+  useEffect(() => {
+    const sectionId = sessionStorage.getItem("scrollTo");
+    if (sectionId) {
+      const scrollToSection = () => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+          sessionStorage.removeItem("scrollTo");
+        }
+      };
+
+      setTimeout(scrollToSection, 100);
+    }
+  }, []);
 
   return (
     <div>
