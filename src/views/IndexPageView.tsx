@@ -40,12 +40,12 @@ const IndexPageView = () => {
           <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-6 md:mt-0">
             <div className="w-[90%]">
               <div data-aos="fade-left" data-aos-duration="3000" className="flex items-center justify-start gap-3">
-                <img className="w-[60%] h-auto" src="/img/intro-1top.jpeg" alt="" />
-                <img className="w-[40%] h-auto" src="/img/intro-2top.jpeg" alt="" />
+                <img className="w-[60%] h-auto" src="/img/intro-1top.jpeg" alt="retratos varios" />
+                <img className="w-[40%] h-auto" src="/img/intro-2top.jpeg" alt="retratos varios" />
               </div>
               <div data-aos="fade-left" data-aos-duration="3000" className="flex items-center justify-end gap-3 mt-3">
-                <img className="w-[40%] h-auto" src="/img/intro-1bottom.jpeg" alt="" />
-                <img className="w-[60%] h-auto" src="/img/intro-2bottom.jpeg" alt="" />
+                <img className="w-[40%] h-auto" src="/img/intro-1bottom.jpeg" alt="retratos varios" />
+                <img className="w-[60%] h-auto" src="/img/intro-2bottom.jpeg" alt="retratos varios" />
               </div>
             </div>
           </div>
@@ -58,34 +58,34 @@ const IndexPageView = () => {
 
           <div className="w-[80%] lg:w-[100%] grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 grid-rows-5 gap-4 ">
             <div data-aos="fade-right" data-aos-duration="3000" className="row-span-2 flex items-end">
-              <img src="/imgTrabajos/img1.jpeg" alt="" />
+              <img src="/imgTrabajos/img1.jpeg" alt="retratos varios" />
             </div>
             <div data-aos="fade-right" data-aos-duration="3000" className="row-span-2 flex items-end">
-              <img src="/imgTrabajos/img2.jpeg" alt="" />
+              <img src="/imgTrabajos/img2.jpeg" alt="retratos varios" />
             </div>
             <div data-aos="fade-left" data-aos-duration="3000" className="row-span-3 flex items-end">
-              <img src="/imgTrabajos/img3.jpeg" alt="" />
+              <img src="/imgTrabajos/img3.jpeg" alt="retratos varios" />
             </div>
             <div data-aos="fade-left" data-aos-duration="3000" className="row-span-3">
-              <img src="/imgTrabajos/img4.jpeg" alt="" />
+              <img src="/imgTrabajos/img4.jpeg" alt="retratos varios" />
             </div>
             <div data-aos="fade-right" data-aos-duration="3000" className="row-span-3">
-              <img src="/imgTrabajos/img5.jpeg" alt="" />
+              <img src="/imgTrabajos/img5.jpeg" alt="retratos varios" />
             </div>
             <div data-aos="fade-right" data-aos-duration="3000" className="row-span-3">
-              <img src="/imgTrabajos/img6.jpeg" alt="" />
+              <img src="/imgTrabajos/img6.jpeg" alt="retratos varios" />
             </div>
             <div data-aos="fade-left" data-aos-duration="3000" className="row-span-2 flex items-start">
-              <img src="/imgTrabajos/img7.jpeg" alt="" />
+              <img src="/imgTrabajos/img7.jpeg" alt="retratos varios" />
             </div>
             <div data-aos="fade-left" data-aos-duration="3000" className="row-span-2 flex items-start">
-              <img src="/imgTrabajos/img8.jpeg" alt="" />
+              <img src="/imgTrabajos/img8.jpeg" alt="retratos varios" />
             </div>
           </div>
         </article>
 
         <Link to="https://www.instagram.com/negro_enpapel/" target="_blank" rel="noopener noreferrer" className="text-white mb-7 text-1xl font-light flex items-center">
-          <img className="w-[20%] me-1" src="/img/icon-instagram-color.png" alt="" />
+          <img className="w-[20%] me-1" src="/img/icon-instagram-color.png" alt="icono de instagram" />
         @negro_enPapel
         </Link>
       </section>
@@ -128,7 +128,7 @@ const IndexPageView = () => {
             </div>
           </div>
           <div className="w-full md:w-[40%] flex justify-center items-center mt-6 md:mt-0">
-            <img className="w-[90%] md:w-[100%] lg:w-[70%] lg:h-[65vh]" src="/imgTrabajos/img-informacion.png" alt="" />
+            <img className="w-[90%] md:w-[100%] lg:w-[70%] lg:h-[65vh]" src="/imgTrabajos/img-informacion.png" alt="retratos varios" />
           </div>
         </article>
       </section>
@@ -136,8 +136,7 @@ const IndexPageView = () => {
       <section className="w-full flex justify-center">
     <article id="contactoId" className="w-[90%] md:w-[80%] lg:w-[40%] flex flex-col justify-center items-center my-14 border-t border-black">
       <h2 className="my-10 text-2xl md:text-3xl font-light">Contacto</h2>
-      <div className="w-[90%] md:w-[80%] bg-[#1E1E1E] flex flex-col items-center py-6 rounded-2xl">
-        <h3 className="text-white font-light mb-4">Camila Ortiz Borquez</h3>
+      <div className="w-[90%] md:w-[80%] bg-[#1E1E1E] flex flex-col items-center py-6 rounded-2xl">        
         <p className="text-white font-light">negro.enpapel@gmail.com</p>
         <div className="w-[60%] md:w-[30%] flex justify-around items-center my-6">
           

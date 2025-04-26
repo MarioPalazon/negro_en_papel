@@ -150,6 +150,7 @@ export default function Chatbot() {
     <div className="fixed bottom-5 right-5 z-50">
       {/* Botón flotante para abrir/cerrar el chat */}
       <button
+        name="abrir chatbot"
         onClick={toggleChat}
         className={`flex items-center justify-center w-14 h-14 rounded-full shadow-lg transition-all duration-300 ${
           isOpen ? "bg-red-500 rotate-90" : "bg-blue-500 hover:bg-blue-600"

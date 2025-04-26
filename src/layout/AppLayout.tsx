@@ -31,18 +31,18 @@ const AppLayout = () => {
 
           <div className=" w-full md:w-[30%] flex flex-col md:justify-center mt-3 lg:flex">
             <h4 className="text-white text-[15px] font-light flex justify-center items-center md:justify-start md:mb-3">
-              <img className="w-[7%] me-2" src="/img/icon-ubicacion.png" alt="" />
+              <img className="w-[7%] me-2" src="/img/icon-ubicacion.png" alt="pin de un mapa" />
               Santiago, Chile
               </h4>
             <p className="text-white text-[15px] font-light flex justify-center items-center md:justify-start">
-              <img className="w-[7%] me-2" src="/img/icon-box.png" alt="" />
+              <img className="w-[7%] me-2" src="/img/icon-box.png" alt="imagen de una caja" />
               Envio a Regiones
             </p>
           </div>
 
           <div className="w-full md:w-[30%] py-5">
             <Link className="w-full flex justify-center md:justify-center" to="/">
-              <img className="w-[50%] md:w-[80%] lg:w-[50%]" src="/img/logo-negro-en-papel.jpeg" alt="" />
+              <img className="w-[50%] md:w-[80%] lg:w-[50%]" src="/img/logo-negro-en-papel.jpeg" alt="logo negro en papel" />
             </Link>
           </div>
 
@@ -75,7 +75,7 @@ const AppLayout = () => {
                 </button>
               </li>
               <li className="font-light">
-                <button onClick={()=>handleClick("galeria","")}>Galeria</button>
+                <button className="cursor-pointer hover:text-cyan-50" onClick={()=>handleClick("galeria","")}>Galeria</button>
               </li>
             </ul>
           </nav>
