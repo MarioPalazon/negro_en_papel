@@ -22,7 +22,7 @@ const IndexPageView = () => {
 
   return (
     <div>
-      <section className="w-full flex justify-center">
+      <section className="w-full flex justify-center overflow-x-hidden">
         <article className="w-[90%] md:w-[80%] flex flex-col md:flex-row my-14 lg:w-[70%]">
           {/* Texto */}
           <div className="w-full md:w-1/2 flex justify-center md:justify-between">
@@ -52,7 +52,7 @@ const IndexPageView = () => {
         </article>
       </section>
 
-      <section id="trabajosId" className="w-full flex flex-col items-center justify-center bg-[#1E1E1E]">
+      <section id="trabajosId" className="w-full flex flex-col items-center justify-center bg-[#1E1E1E] overflow-x-hidden">
         <h2 className="text-white my-5 text-3xl font-light">Mis Trabajos</h2>
         <article className="w-full md:w-[90%] lg:w-[70%] flex justify-center py-14">
 

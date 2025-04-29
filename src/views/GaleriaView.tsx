@@ -4,7 +4,7 @@ export const GaleriaView = () => {
   return (
     <div>
 
-      <section className='w-full flex flex-col items-center'>
+      <section className='w-full flex flex-col items-center overflow-x-hidden'>
         <div className='w-[80%] md:w-[60%] items-center mt-11'>
           <h1 className='text-2xl font-light md:text-3xl mb-6'>Mi Galeria</h1>
           <p className='font-light md:text-base'>Estos son algunos de los retratos realizados. Si quieres ver más trabajos visita mi Instagram</p>
